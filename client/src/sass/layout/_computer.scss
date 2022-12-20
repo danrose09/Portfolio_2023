@@ -1,0 +1,120 @@
+.contact__computer {
+  &--monitor-outer {
+    height: 35rem;
+    width: 50rem;
+    border: 3px solid whitesmoke;
+    margin: 2rem auto 2rem auto;
+
+    @include respond(phone) {
+      height: calc(35rem / 1.1);
+      width: calc(50rem / 1.2);
+      margin: auto;
+      border: none;
+    }
+  }
+
+  &--monitor-inner {
+    height: 30rem;
+    width: calc(50rem - (50rem / 7));
+    border: 2px solid blue;
+    margin: 2.2rem auto;
+    border-radius: 20px;
+    padding: 2rem;
+
+    @include respond(phone) {
+      height: calc(30rem / 1.1);
+      width: calc((50rem - (50rem / 7)) / 1.2);
+    }
+  }
+
+  &--keyboard {
+    height: 25rem;
+    width: 70rem;
+    border: 3px solid whitesmoke;
+    margin: auto;
+    padding: 1rem;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &--keyboard-row {
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.contact__keyboard {
+  &--key {
+    height: 3rem;
+    width: 3rem;
+    padding: 0.2rem;
+    border: 1px solid whitesmoke;
+    letter-spacing: 0;
+    box-shadow: 2px 4px blue;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      box-shadow: 1.5px 3px blue;
+      transform: translateY(1px);
+    }
+  }
+
+  &--key-13 {
+    width: 8rem;
+  }
+
+  //Row 2
+  &--key-row2-0 {
+    width: 6rem;
+  }
+
+  &--key-row2-13 {
+    font-size: 0.5em;
+    font-family: inherit;
+    width: 6.5rem;
+
+    box-shadow: 2px 4px blue;
+  }
+
+  //Row 3
+  &--key-row3-0 {
+    width: 7rem;
+  }
+  &--key-row3-13 {
+    width: 5rem;
+  }
+
+  //Row 4
+  &--key-row4-0 {
+    width: 8rem;
+  }
+
+  &--key-row4-11 {
+    width: 10rem;
+  }
+
+  //Row 5
+  &--key-row5-0,
+  &--key-row5-6 {
+    width: 6rem;
+  }
+
+  &--key-row5-1,
+  &--key-row5-2,
+  &--key-row5-4,
+  &--key-row5-5 {
+    width: 5rem;
+  }
+
+  &--key-row5-3 {
+    width: 30rem;
+  }
+}
